@@ -13,6 +13,8 @@ import Navbar from './components/navBar';
 // import particles from "./utils.js/particles";
 import Certificate from './containers/Certificate';
 import Footer from './components/footer';
+import AdminPanel from './containers/AdminPanel';
+import { DataProvider } from './context/DataContext';
 
 export default function App() {
 
@@ -24,32 +26,35 @@ export default function App() {
   // const renderParticleJsIsHomePage = location.pathname === "/";
 
   return (
-    <div className='App'>
-      {/* particles js */}
-      {/* {renderParticleJsIsHomePage && <Particles id='particles' options={particles} init={handleInit}/>} */}
+    <DataProvider>
+      <div className='App'>
+        {/* particles js */}
+        {/* {renderParticleJsIsHomePage && <Particles id='particles' options={particles} init={handleInit}/>} */}
 
 
-      {/* navbar */}
-      <Navbar/>
+        {/* navbar */}
+        <Navbar/>
 
 
-      {/* main page content */}
-      <div className='App__main-page-content'>
+        {/* main page content */}
+        <div className='App__main-page-content'>
 
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/About' element={<About/>}/>
-        <Route path='/Skills' element={<Skills/>}/>
-        <Route path='/Certificate' element={<Certificate/>}/>
-        <Route path='/Resume' element={<Resume/>}/>
-        <Route path='/Portfolio' element={<Portfolio/>}/>
-        <Route path='/Contact' element={<Contact/>}/>
-      </Routes>
-      </div>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/About' element={<About/>}/>
+          <Route path='/Skills' element={<Skills/>}/>
+          <Route path='/Certificate' element={<Certificate/>}/>
+          <Route path='/Resume' element={<Resume/>}/>
+          <Route path='/Portfolio' element={<Portfolio/>}/>
+          <Route path='/Contact' element={<Contact/>}/>
+          <Route path='/Admin' element={<AdminPanel/>}/>
+        </Routes>
+        </div>
 
-      <Footer/>
+        <Footer/>
       
-    </div>
+      </div>
+    </DataProvider>
   );
 }
 
