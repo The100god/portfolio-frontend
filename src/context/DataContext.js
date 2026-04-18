@@ -29,7 +29,7 @@ export const DataProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const [useLocalStorage, setUseLocalStorage] = useState(false);
-console.log('data context', data);
+// console.log('data context', data);
   // Fetch data from MongoDB on mount
   useEffect(() => {
     const fetchData = async () => {

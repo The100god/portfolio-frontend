@@ -224,7 +224,7 @@ Edit `src/containers/AdminPanel/styles.scss` to customize:
 1. **Regular Backups:** Export your data periodically
    ```javascript
    const data = JSON.parse(localStorage.getItem('portfolioData'));
-   console.log(JSON.stringify(data, null, 2));
+   <!-- console.log(JSON.stringify(data, null, 2)); -->
    ```
 
 2. **Validate URLs:** Ensure portfolio links and social media URLs are correct

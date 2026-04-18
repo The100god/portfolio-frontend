@@ -13,7 +13,7 @@ import { DataContext } from '../../context/DataContext';
 const Resume = () => {
   const { data } = useContext(DataContext);
 
-  console.log('data experience', data);
+  // console.log('data experience', data);
   return (
     <section id='resume' className='resume'>
     <Animate
