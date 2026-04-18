@@ -44,12 +44,17 @@ const Certificate = () => {
                 onMouseLeave={() => handleHover(null)}
               >
                 <div className="certificate__content__cards__item__image-wrapper">
-                  <a href={item.link || item.image || '#'} target="_blank" rel="noreferrer">
+                  <a
+                    href={item.link || item.image || "#"}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     {item.image ? (
                       <img src={item.image} alt={item.name} />
                     ) : (
                       <div className="certificate__placeholder">
                         <span>{item.name}</span>
+                        <p>{item.issuer}</p>
                       </div>
                     )}
                   </a>
@@ -59,7 +64,11 @@ const Certificate = () => {
                   {index === hoverValue && (
                     <div>
                       <p>{item.name}</p>
-                      <a href={item.link || item.image || '#'} target="_blank" rel="noreferrer">
+                      <a
+                        href={item.link || item.image || "#"}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <button>Visit</button>
                       </a>
                     </div>
@@ -68,7 +77,14 @@ const Certificate = () => {
               </div>
             ))
           ) : (
-            <p style={{ fontSize: '1.6rem', color: 'var(--green-theme-main-color)', textAlign: 'center', padding: '40px' }}>
+            <p
+              style={{
+                fontSize: "1.6rem",
+                color: "var(--green-theme-main-color)",
+                textAlign: "center",
+                padding: "40px",
+              }}
+            >
               No certificates yet. Add them from the Admin Panel.
             </p>
           )}

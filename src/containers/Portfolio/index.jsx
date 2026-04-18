@@ -76,7 +76,7 @@ const Portfolio = () => {
           )}
         </div>
 
-        {data.certificates && data.certificates.length > 0 && (
+        {/* {data.certificates && data.certificates.length > 0 && (
           <div className="portfolio__certificates">
             <h2>Certificates</h2>
             <div className="portfolio__certificates__cards">
@@ -98,7 +98,7 @@ const Portfolio = () => {
               ))}
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </section>
   );
