@@ -54,7 +54,6 @@ const Certificate = () => {
                     ) : (
                       <div className="certificate__placeholder">
                         <span>{item.name}</span>
-                        <p>{item.issuer}</p>
                       </div>
                     )}
                   </a>
@@ -64,6 +63,7 @@ const Certificate = () => {
                   {index === hoverValue && (
                     <div>
                       <p>{item.name}</p>
+                      <p>{item.issuer}</p>
                       <a
                         href={item.link || item.image || "#"}
                         target="_blank"
