@@ -20,9 +20,9 @@ const Contact = () => {
   const form = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("p-key", p_key);
-    console.log("s-id", s_id);
-    console.log("t-id", t_id);
+    // console.log("p-key", p_key);
+    // console.log("s-id", s_id);
+    // console.log("t-id", t_id);
     emailjs.send(s_id, t_id, recivedMessage, p_key).then(
       (result) => {
         console.log(result.text);
